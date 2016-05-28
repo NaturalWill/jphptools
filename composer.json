@@ -1,10 +1,21 @@
 {
-    "name": "naturalwill/jphptools",
+    "name": "jier/jphptools",
+    "type": "library",
     "authors": [
         {
             "name": "Jier Zhang",
             "email": "naturalwill999@gmail.com"
         }
     ],
-    "require": {}
+    "autoload" : {
+        "psr-0":{"jpush":"src/"},
+        "files": [
+            "src/Json2xml.php",
+            "src/Capi.php"
+        ]
+
+    },
+    "require": {
+        "php": ">=5.1"
+	}
 }

@@ -1,0 +1,10 @@
+{
+    "name": "naturalwill/jphptools",
+    "authors": [
+        {
+            "name": "Jier Zhang",
+            "email": "naturalwill999@gmail.com"
+        }
+    ],
+    "require": {}
+}

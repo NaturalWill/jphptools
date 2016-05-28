@@ -8,7 +8,7 @@
         }
     ],
     "autoload" : {
-        "psr-0":{"jpush":"src/"},
+        "psr-0":{"jphptools":"src/"},
         "files": [
             "src/Json2xml.php",
             "src/Capi.php"

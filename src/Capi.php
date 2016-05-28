@@ -1,8 +1,7 @@
 <?php
 class Capi {
 	static function mkjson($response = '', $callback = '') {
-		global $_SGLOBAL;
-		$response = empty ( $response ) ? $_SGLOBAL ['mresponse'] : $response;
+		
 		if ($callback) {
 			header ( 'Cache-Control: no-cache, must-revalidate' );
 			header ( 'Content-Type: text/javascript;charset=utf-8' );
@@ -18,7 +17,7 @@ class Capi {
 		exit ();
 	}
 	public static function showmessage_by_data($msgkey, $code = 1, $data = array()) {
-		obclean ();
+		ob_clean ();
 		
 		// 语言
 		$msglang = include __DIR__ . DIRECTORY_SEPARATOR . 'lang_showmessage.php';

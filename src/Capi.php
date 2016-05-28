@@ -1,7 +1,6 @@
 <?php
 class Capi {
 	static function mkjson($response = '', $callback = '') {
-		
 		if ($callback) {
 			header ( 'Cache-Control: no-cache, must-revalidate' );
 			header ( 'Content-Type: text/javascript;charset=utf-8' );
@@ -31,7 +30,8 @@ class Capi {
 		$r ['data'] = $data;
 		$r ['msg'] = $message;
 		$r ['action'] = $msgkey;
-		self::mkjson ( $r, $_REQUEST ['callback'] );
+		$callback = empty ( $_REQUEST ['callback'] ) ? '' : $_REQUEST ['callback'];
+		self::mkjson ( $r, $callback );
 	}
 	
 	// 语言替换
